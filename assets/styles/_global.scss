@@ -1,0 +1,112 @@
+// my style
+@import "bootstrap/scss/bootstrap.scss";
+@font-face {
+  font-family: "Roboto";
+  src: url(./../fonts/Roboto-Light.woff);
+}
+$main-font: "Roboto";
+$progressBar_height: 7;
+:root {
+  --percentage: 0;
+  --progressColor: #1b73ba;
+}
+@mixin center-content {
+  text-align: center;
+  margin: 15px 0;
+}
+@mixin general-pg {
+  height: 100vh;
+  padding: 20px;
+}
+@mixin center-row {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+// reset
+body {
+  font-family: $main-font;
+}
+ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+// main layout
+.main-layout {
+  &_comp {
+    height: 100vh;
+    .menu {
+      &_btn {
+        position: fixed;
+        top: 30px;
+        left: 20px;
+        cursor: pointer;
+      }
+    }
+    .pages_sec {
+      height: 100%;
+    }
+  }
+}
+// progress bar
+//   progress
+
+.progress {
+  background: #e1e1e1;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+
+  display: flex;
+  height: $progressBar_height + px;
+  width: 100%;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  border-radius: 100px;
+  background: var(--progressColor);
+  // background: #1b73ba;
+  height: $progressBar_height + px;
+  width: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--percentage);
+  }
+}
+// scroll bar
+.g_scroll {
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}

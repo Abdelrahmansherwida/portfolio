@@ -1,0 +1,11 @@
+// error_pg
+.error_pg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  img {
+    width: 50%;
+  }
+}

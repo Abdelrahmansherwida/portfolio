@@ -1,0 +1,36 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: fit-content;
+  transition: width 400ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  background-color: #fbfbfd;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 24%);
+  &_list {
+    padding: 0 15px;
+    text-align: center;
+    &-icon {
+      padding: 20px 0;
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    cursor: pointer;
+    &_icon {
+      cursor: pointer;
+      width: 20px;
+    }
+  }
+}
