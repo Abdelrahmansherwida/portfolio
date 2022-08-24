@@ -43,12 +43,18 @@ ul {
   margin: 0;
 }
 
-.hidden {
+.hiddenMenu {
   display: none;
 }
 
-.show {
+.showMenu {
   display: block;
+
+  @media (max-width:1024px) {
+    position: fixed;
+    z-index: 999;
+
+  }
 }
 
 // main layout
@@ -60,8 +66,13 @@ ul {
       &_btn {
         position: fixed;
         top: 30px;
-        left: 20px;
+        left: 15px;
         cursor: pointer;
+        background: #fff;
+        padding: 7px;
+        border-radius: 8px;
+        box-shadow: 0px -3px 6px rgb(0 0 0 / 5%), 0 3px 6px rgba(0, 0, 0, 0.13);
+        border: 1px solid #00000017;
         display: none;
 
         @media (max-width: 1024px) {
@@ -128,7 +139,7 @@ ul {
 
 // scroll bar
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -140,7 +151,7 @@ ul {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 0px;
   border-radius: 0px;
-  background: #0f172a;
+  background: #707070;
   // background: #4f52ff;
 }
 
@@ -166,5 +177,46 @@ ul {
 
   100% {
     transform: scale(1);
+  }
+}
+
+// mobile special
+.mobileHide {
+
+  @media (max-width:700px) {
+    display: none;
+
+  }
+}
+
+.mobileFullWidth {
+
+  @media (max-width:700px) {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
+  }
+}
+
+.dots-etc {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  width: 60%;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  @media (min-width:1025px) {
+    display: none;
   }
 }

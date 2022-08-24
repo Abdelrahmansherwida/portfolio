@@ -13,6 +13,16 @@
       h1 {
         font-weight: bolder;
         font-size: 2.7vmax;
+
+        @media (max-width:1024px) {
+          font-size: 2rem;
+
+        }
+
+        @media (max-width:375px) {
+          font-size: 1.7rem;
+
+        }
       }
     }
 
@@ -22,6 +32,16 @@
       h3 {
         font-weight: bolder;
         font-size: 1.7vmax;
+
+        @media (max-width:1024px) {
+          font-size: 2rem;
+
+        }
+
+        @media (max-width:375px) {
+          font-size: 1.27rem;
+
+        }
       }
     }
 
@@ -32,6 +52,24 @@
         font-size: 1.2vmax;
         font-weight: 500;
         padding-inline: 30px;
+
+        @media (max-width:1024px) {
+          font-size: 2rem;
+          padding-inline: 30px;
+
+        }
+
+        @media (max-width:500px) {
+          font-size: 1.23rem;
+          padding-inline: 10px;
+
+        }
+
+        @media (max-width:450px) {
+          font-size: 1.23rem;
+          padding-inline: 0px;
+
+        }
       }
     }
   }
