@@ -1,5 +1,6 @@
 .skills-pg {
   height: 100%;
+
   &_bg {
     img {
       opacity: 0.19;
@@ -12,11 +13,14 @@
       z-index: -1;
     }
   }
+
   .container {
     height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
+    z-index: 0;
+
     .tabs {
       button {
         font-size: 16px;
@@ -29,6 +33,7 @@
         padding: 5px 30px;
         margin-bottom: 30px;
       }
+
       .active {
         border-color: #6265fe;
         color: #fff;
@@ -37,8 +42,10 @@
         transition: 0.5s;
       }
     }
+
     .row {
       width: 100%;
+
       .card {
         color: #6e6e6e;
         background: #fff;
@@ -54,9 +61,12 @@
         height: 480px;
         height: 480px;
         overflow: auto;
+        position: initial;
+
         .title {
           color: #000;
           margin-bottom: 25px;
+
           h3 {
             background: #f7f7f7;
             font-size: 15px;
@@ -68,14 +78,17 @@
             margin-bottom: 25px;
           }
         }
+
         &_block {
           margin-top: 15px;
           color: #6e6e6e;
           font-size: 17px;
+
           span {
             font-size: 18px;
             color: #0f172a;
           }
+
           hr {
             background-color: #ada9a9;
             border-width: 0;
@@ -85,22 +98,27 @@
             width: 100%;
             margin: 0;
           }
-          .company {
-            color: #000;
-            margin-bottom: 10px !important;
-          }
+
+          // .company {
+          //   color: #000;
+          //   margin-bottom: 10px !important;
+          // }
         }
+
         &_progress {
           margin-top: 15px;
           color: #6e6e6e;
           font-size: 18px;
           margin-bottom: 32px;
+
           &-name {
             color: #0f172a;
           }
+
           &-rate {
             float: right;
           }
+
           &-img {
             width: 28px;
             height: 28px;
@@ -108,6 +126,7 @@
           }
         }
       }
+
       .eduSkill {
         overflow: hidden;
       }

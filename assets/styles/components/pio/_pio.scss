@@ -1,26 +1,33 @@
 // pio-sec
 .pio_sec {
   height: 100%;
+
   .row {
     @include center-row;
+
     .name {
       @include center-content;
       display: flex;
       justify-content: center;
+
       h1 {
         font-weight: bolder;
         font-size: 2.7vmax;
       }
     }
+
     .job {
       @include center-content;
+
       h3 {
         font-weight: bolder;
         font-size: 1.7vmax;
       }
     }
+
     .qout {
       @include center-content;
+
       p {
         font-size: 1.2vmax;
         font-weight: 500;
@@ -28,13 +35,16 @@
       }
     }
   }
+
   &-bg {
+    position: fixed;
+    top: 0;
+    height: 100%;
+
     img {
-      border-radius: 50%;
       width: 100%;
       height: 100%;
-      box-shadow: 0 4px 8px rgb(255 255 255 / 8%),
-        0 4px 12px rgb(255 255 255 / 24%);
+      object-fit: contain;
     }
   }
 }
