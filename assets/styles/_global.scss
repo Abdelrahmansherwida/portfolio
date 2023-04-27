@@ -1,29 +1,23 @@
 // my style
 @import "bootstrap/scss/bootstrap.scss";
-
 @font-face {
   font-family: "Roboto";
   src: url(./../fonts/Roboto-Light.woff);
 }
-
 $main-font: "Roboto";
 $progressBar_height: 7;
-
 :root {
   --percentage: 0;
   --progressColor: #1b73ba;
 }
-
 @mixin center-content {
   text-align: center;
   margin: 15px 0;
 }
-
 @mixin general-pg {
   height: 100vh;
   padding: 20px;
 }
-
 @mixin center-row {
   margin: 0;
   height: 100%;
@@ -31,78 +25,37 @@ $progressBar_height: 7;
   justify-content: center;
   align-items: center;
 }
-
 // reset
 body {
   font-family: $main-font;
 }
-
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.hiddenMenu {
+.hidden {
   display: none;
 }
-
-.showMenu {
+.show {
   display: block;
-
-  @media (max-width:1024px) {
-    position: fixed;
-    z-index: 999;
-
-  }
 }
-
 // main layout
 .main-layout {
   &_comp {
     height: 100vh;
-
     .menu {
       &_btn {
         position: fixed;
         top: 30px;
-        left: 15px;
+        left: 20px;
         cursor: pointer;
-        background: #fff;
-        padding: 7px;
-        border-radius: 8px;
-        box-shadow: 0px -3px 6px rgb(0 0 0 / 5%), 0 3px 6px rgba(0, 0, 0, 0.13);
-        border: 1px solid #00000017;
-        display: none;
-
-        @media (max-width: 1024px) {
-          display: block;
-        }
       }
     }
-
     .pages_sec {
       height: 100%;
-      padding: 70px 40px;
-
-      @media(min-width:1025px) {
-        margin-inline-start: 70px;
-
-      }
     }
   }
 }
-
-// pg-title
-.pg-title {
-  h3 {
-    font-size: 25px;
-    color: #0f172a;
-    font-weight: 600;
-    margin-bottom: 40px;
-  }
-}
-
 // progress bar
 //   progress
 
@@ -131,92 +84,29 @@ ul {
   0% {
     width: 0;
   }
-
   100% {
     width: var(--percentage);
   }
 }
-
 // scroll bar
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-  background: #707070;
-  // background: #4f52ff;
-}
-
-// animtion
-.bounce-in {
-  animation: bounce-in 2s ease;
-}
-
-@keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(.3);
+.g_scroll {
+  &::-webkit-scrollbar {
+    width: 7px;
   }
 
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
-  70% {
-    transform: scale(.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-// mobile special
-.mobileHide {
-
-  @media (max-width:700px) {
-    display: none;
-
-  }
-}
-
-.mobileFullWidth {
-
-  @media (max-width:700px) {
-    max-width: 100%;
-    flex: 0 0 100%;
-    padding: 0;
-  }
-}
-
-.dots-etc {
-  white-space: nowrap;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  width: 60%;
-}
-
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-
-  @media (min-width:1025px) {
-    display: none;
+  &::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 }
